@@ -1,7 +1,14 @@
 # Starter pipeline
-- task: DotNetCoreCLI@2
+- task: AzureRmWebAppDeployment@4
   inputs:
-    command: 'build'
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Visual Studio Enterprise Subscription(a9d066ee-85ba-4ead-9151-b95cafe72337)'
+    appType: 'webApp'
+    WebAppName: 'superhonie'
+    deployToSlotOrASE: true
+    ResourceGroupName: 'AzurePipelineTestRG'
+    SlotName: 'production'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
