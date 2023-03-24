@@ -1,5 +1,5 @@
 # Starter pipeline
-- task: AzureRmWebAppDeployment@4
+ task: AzureRmWebAppDeployment@4
   inputs:
     ConnectionType: 'AzureRM'
     azureSubscription: 'Visual Studio Enterprise Subscription(a9d066ee-85ba-4ead-9151-b95cafe72337)'
